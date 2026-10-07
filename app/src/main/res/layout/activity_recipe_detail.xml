@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 2: ScrollView permite rolar quando o conteúdo é maior que a tela -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RecipeDetailActivity">
+
+    <!-- O ScrollView aceita apenas um filho: este LinearLayout vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- FrameLayout: empilha Views; o tempo de preparo fica sobre a imagem -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/imageRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_light"
+                android:contentDescription="@string/recipe_image_description"
+                android:padding="40dp"
+                tools:src="@drawable/ic_recipe_default" />
+
+            <!-- Selo com o tempo de preparo no canto inferior direito -->
+            <TextView
+                android:id="@+id/textPrepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="12dp"
+                android:background="@color/overlay"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="30 min" />
+        </FrameLayout>
+
+        <!-- Conteúdo de texto com margens -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Brigadeiro" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Descrição da receita" />
+
+            <TextView
+                android:id="@+id/textServings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text_secondary"
+                tools:text="Rende 4 porções" />
+
+            <!-- Ingredientes -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/section_ingredients"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
+                tools:text="• 1 lata Leite condensado\n• Sal" />
+
+            <!-- Modo de preparo -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/section_steps"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
+                tools:text="1. Primeiro passo\n2. Segundo passo" />
+
+            <!-- Dica: fica GONE (invisível e sem ocupar espaço) quando tip == null -->
+            <TextView
+                android:id="@+id/textTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/tip_background"
+                android:padding="12dp"
+                android:visibility="gone"
+                tools:text="💡 Dica: texto da dica"
+                tools:visibility="visible" />
+
+            <!-- Botão que alterna o estado de favorito -->
+            <Button
+                android:id="@+id/buttonFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/button_favorite" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 1: LinearLayout vertical com título e lista -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <!-- Título da tela -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/title_recipes"
+        android:textColor="@color/primary"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Lista de receitas: ocupa o resto da tela (weight = 1) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_recipe" />
+
+</LinearLayout>

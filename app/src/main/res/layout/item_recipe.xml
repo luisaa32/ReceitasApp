@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item da lista: imagem + espaço + textos, lado a lado -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Imagem da receita (64dp x 64dp) -->
+    <ImageView
+        android:id="@+id/imageRecipe"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/primary_light"
+        android:contentDescription="@string/recipe_image_description"
+        android:padding="8dp"
+        tools:src="@drawable/ic_recipe_default" />
+
+    <!-- Espaço entre a imagem e os textos -->
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="wrap_content" />
+
+    <!-- Textos empilhados verticalmente -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Brigadeiro" />
+
+        <TextView
+            android:id="@+id/textInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            tools:text="20 min • 25 porções" />
+    </LinearLayout>
+
+</LinearLayout>

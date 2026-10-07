@@ -1,0 +1,22 @@
+<resources>
+    <!-- Nome do app -->
+    <string name="app_name">Receitas</string>
+
+    <!-- Tela de lista -->
+    <string name="title_recipes">Receitas</string>
+    <string name="recipe_info">%1$d min • %2$d porções</string>
+    <string name="recipe_image_description">Imagem da receita</string>
+
+    <!-- Tela de detalhes -->
+    <string name="title_detail">Detalhes</string>
+    <string name="prep_time">%1$d min</string>
+    <string name="servings">Rende %1$d porções</string>
+    <string name="section_ingredients">Ingredientes</string>
+    <string name="section_steps">Modo de preparo</string>
+    <string name="tip_format">💡 Dica: %1$s</string>
+    <string name="button_favorite">Favoritar ☆</string>
+    <string name="button_favorited">Favoritado ★</string>
+    <string name="toast_favorited">%1$s adicionada aos favoritos</string>
+    <string name="toast_unfavorited">%1$s removida dos favoritos</string>
+    <string name="error_recipe_not_found">Receita não encontrada</string>
+</resources>
